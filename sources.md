@@ -1,4 +1,10 @@
-#### KVM Disk Resize  
+### KVM  
+
+#### Create disk img  
+[raymii.org](https://raymii.org/s/tutorials/KVM_add_disk_image_or_swap_image_to_virtual_machine_with_virsh.html#Create_and_attach_the_disk_image)  
+`qemu-img create -f raw example-vm-swap.img 1G`  
+
+#### Disk Resize  
 [serverfault](http://serverfault.com/questions/324281/how-do-you-increase-a-kvm-guests-disk-space)
 `qemu-img resize vmdisk.img +10G`
 
