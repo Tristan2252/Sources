@@ -38,3 +38,6 @@ sdd      8:48   0 298.1G  0 disk
 sde      8:64   0 465.8G  0 disk
 └─sde1   8:65   0 465.8G  0 part /mnt/BackupDrive
 ```
+### Network
+#### Display Adapter Speed
+`ethtool eth0`
