@@ -5,8 +5,19 @@
 `qemu-img create -f raw example-vm-swap.img 1G`  
 
 #### Disk Resize  
-[serverfault](http://serverfault.com/questions/324281/how-do-you-increase-a-kvm-guests-disk-space)
+[serverfault](http://serverfault.com/questions/324281/how-do-you-increase-a-kvm-guests-disk-space)  
 `qemu-img resize vmdisk.img +10G`
+
+#### Ejecting the existing media
+[ndchost.com](https://www.ndchost.com/wiki/libvirt/change-media)  
+```
+virsh # domblklist vm1
+Target     Source
+------------------------------------------------
+hda        /dev/storage1/vm1_disk1
+hdc        /var/lib/libvirt/images/cd1.iso
+```
+`virsh # change-media vm1 hdc --eject`
 
 ### Drives
 
