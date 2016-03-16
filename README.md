@@ -8,3 +8,6 @@ This repo contains links and instructions on all the research i have done for my
   
 [Drives](https://github.com/Tristan2252/Sources/blob/master/sources.md#drives)
 * [Find UUID](https://github.com/Tristan2252/Sources/blob/master/sources.md#find-uuid-of-drive)
+ 
+[Network](https://github.com/Tristan2252/Sources/blob/master/sources.md#network)
+* [Display Adapter Speed](https://github.com/Tristan2252/Sources/blob/master/sources.md#display-adapter-speed)
