@@ -7,15 +7,15 @@
 [raymii.org](https://raymii.org/s/tutorials/KVM_add_disk_image_or_swap_image_to_virtual_machine_with_virsh.html#Create_and_attach_the_disk_image)  
 `qemu-img create -f raw example-vm-swap.img 1G`  
 
-#### Disk Resize  
+##### Disk Resize  
 [serverfault](http://serverfault.com/questions/324281/how-do-you-increase-a-kvm-guests-disk-space)  
 `qemu-img resize vmdisk.img +10G`
 
-#### Mount CD media
+##### Mount CD media
 [ndchost.com](https://www.ndchost.com/wiki/libvirt/change-media)  
 `virsh # change-media vm1 hdc /var/lib/libvirt/images/cd2.iso --insert`
 
-#### Ejecting the existing media
+##### Ejecting the existing media
 [ndchost.com](https://www.ndchost.com/wiki/libvirt/change-media)  
 ```
 virsh # domblklist vm1
@@ -28,7 +28,7 @@ hdc        /var/lib/libvirt/images/cd1.iso
 
 ### Drives
 
-#### Find UUID of Drive  
+##### Find UUID of Drive  
 [stackexchange](http://unix.stackexchange.com/questions/658/linux-how-can-i-view-all-uuids-for-all-available-disks-on-my-system)  
 `ls -al /dev/disk/by-uuid`  
 Output:
@@ -57,10 +57,10 @@ sde      8:64   0 465.8G  0 disk
 └─sde1   8:65   0 465.8G  0 part /mnt/BackupDrive
 ```
 ### Network
-#### Display Adapter Speed
+##### Display Adapter Speed
 `ethtool eth0`
 
-#### PXE Setup
+##### PXE Setup
 [maketecheasier](https://www.maketecheasier.com/configure-pxe-server-ubuntu/)  
 * Add Image to PXE Server
   - Add Ubuntu 14.04 Desktop Boot Images to PXE Server
