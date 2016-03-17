@@ -59,17 +59,17 @@ sde      8:64   0 465.8G  0 disk
 #### PXE Setup
 [maketecheasier](https://www.maketecheasier.com/configure-pxe-server-ubuntu/)  
 * Add Image to PXE Server
-  - 
+  - Add Ubuntu 14.04 Desktop Boot Images to PXE Server
   ```
   sudo mount -o loop /mnt/ubuntu-14.04.3-desktop-amd64.iso /media/
   sudo cp -r /media/* /var/lib/tftpboot/Ubuntu/14.04/amd64/
   sudo cp -r /media/.disk /var/lib/tftpboot/Ubuntu/14.04/amd64/
   sudo cp /media/casper/initrd.lz /media/casper/vmlinuz /var/lib/tftpboot/Ubuntu/
   ```
-  - 
+  - Configure NFS Server to Export ISO Contents
   ```
   sudo nano /etc/exports
-  /var/lib/tftpboot/Ubuntu/14.04/amd64 *(ro,async,no_root_squash,no_subtree_check)
+    /var/lib/tftpboot/Ubuntu/14.04/amd64 *(ro,async,no_root_squash,no_subtree_check) # add line to exports
   sudo exportfs -a
   sudo /etc/init.d/nfs-kernel-server start
   ```
