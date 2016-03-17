@@ -5,6 +5,7 @@ This repo contains links and instructions on all the research i have done for my
 [KVM](https://github.com/Tristan2252/Sources/blob/master/sources.md#kvm)  
 * [Create Disk](https://github.com/Tristan2252/Sources/blob/master/sources.md#create-disk-img)
 * [Disk Resize](https://github.com/Tristan2252/Sources/blob/master/sources.md#disk-resize)
+* [Mount CD](https://github.com/Tristan2252/Sources/blob/master/sources.md#mount-cd-media)
 * [Ejecting the Existing Media](https://github.com/Tristan2252/Sources/blob/master/sources.md#ejecting-the-existing-media)
   
 [Drives](https://github.com/Tristan2252/Sources/blob/master/sources.md#drives)
@@ -12,3 +13,4 @@ This repo contains links and instructions on all the research i have done for my
  
 [Network](https://github.com/Tristan2252/Sources/blob/master/sources.md#network)
 * [Display Adapter Speed](https://github.com/Tristan2252/Sources/blob/master/sources.md#display-adapter-speed)
+* [PXE Setup](https://github.com/Tristan2252/Sources/blob/master/sources.md#pxe-setup)
