@@ -25,7 +25,7 @@ hda        /dev/storage1/vm1_disk1
 hdc        /var/lib/libvirt/images/cd1.iso
 ```
 `virsh # change-media vm1 hdc --eject`
-
+___
 ### Drives
 
 ##### Find UUID of Drive  
@@ -56,6 +56,7 @@ sdd      8:48   0 298.1G  0 disk
 sde      8:64   0 465.8G  0 disk
 └─sde1   8:65   0 465.8G  0 part /mnt/BackupDrive
 ```
+___
 ### Network
 ##### Display Adapter Speed
 `ethtool eth0`
