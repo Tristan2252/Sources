@@ -1,4 +1,5 @@
 ### KVM  
+_________________________________________________________________________________________
 ##### List VM's
 [virt-tools.org](http://virt-tools.org/learning/start-list-with-command-line/)  
 `list --all`  
@@ -25,9 +26,9 @@ hda        /dev/storage1/vm1_disk1
 hdc        /var/lib/libvirt/images/cd1.iso
 ```
 `virsh # change-media vm1 hdc --eject`
-___
-### Drives
 
+### Drives
+___________________________________________________________________________________________________________
 ##### Find UUID of Drive  
 [stackexchange](http://unix.stackexchange.com/questions/658/linux-how-can-i-view-all-uuids-for-all-available-disks-on-my-system)  
 `ls -al /dev/disk/by-uuid`  
@@ -56,8 +57,8 @@ sdd      8:48   0 298.1G  0 disk
 sde      8:64   0 465.8G  0 disk
 └─sde1   8:65   0 465.8G  0 part /mnt/BackupDrive
 ```
-___
 ### Network
+______________________________________________________________________________________________________
 ##### Display Adapter Speed
 `ethtool eth0`
 
