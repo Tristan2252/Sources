@@ -1,4 +1,7 @@
 ### KVM  
+#### List VM's
+[virt-tools.org](http://virt-tools.org/learning/start-list-with-command-line/)  
+`list --all`  
 
 #### Create disk img  
 [raymii.org](https://raymii.org/s/tutorials/KVM_add_disk_image_or_swap_image_to_virtual_machine_with_virsh.html#Create_and_attach_the_disk_image)  
@@ -52,3 +55,21 @@ sde      8:64   0 465.8G  0 disk
 ### Network
 #### Display Adapter Speed
 `ethtool eth0`
+
+#### PXE Setup
+[maketecheasier](https://www.maketecheasier.com/configure-pxe-server-ubuntu/)  
+* Add Image to PXE Server
+  - 
+  ```
+  sudo mount -o loop /mnt/ubuntu-14.04.3-desktop-amd64.iso /media/
+  sudo cp -r /media/* /var/lib/tftpboot/Ubuntu/14.04/amd64/
+  sudo cp -r /media/.disk /var/lib/tftpboot/Ubuntu/14.04/amd64/
+  sudo cp /media/casper/initrd.lz /media/casper/vmlinuz /var/lib/tftpboot/Ubuntu/
+  ```
+  - 
+  ```
+  sudo nano /etc/exports
+  /var/lib/tftpboot/Ubuntu/14.04/amd64 *(ro,async,no_root_squash,no_subtree_check)
+  sudo exportfs -a
+  sudo /etc/init.d/nfs-kernel-server start
+  ```
