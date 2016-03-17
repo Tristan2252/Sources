@@ -3,6 +3,7 @@ This repo contains links and instructions on all the research i have done for my
 
 ## Table of Contents:
 [KVM](https://github.com/Tristan2252/Sources/blob/master/sources.md#kvm)  
+* [List VM's](https://github.com/Tristan2252/Sources/blob/master/sources.md#list-vms)
 * [Create Disk](https://github.com/Tristan2252/Sources/blob/master/sources.md#create-disk-img)
 * [Disk Resize](https://github.com/Tristan2252/Sources/blob/master/sources.md#disk-resize)
 * [Mount CD](https://github.com/Tristan2252/Sources/blob/master/sources.md#mount-cd-media)
