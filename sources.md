@@ -11,6 +11,10 @@
 [serverfault](http://serverfault.com/questions/324281/how-do-you-increase-a-kvm-guests-disk-space)  
 `qemu-img resize vmdisk.img +10G`
 
+#### Mount CD media
+[ndchost.com](https://www.ndchost.com/wiki/libvirt/change-media)  
+`virsh # change-media vm1 hdc /var/lib/libvirt/images/cd2.iso --insert`
+
 #### Ejecting the existing media
 [ndchost.com](https://www.ndchost.com/wiki/libvirt/change-media)  
 ```
