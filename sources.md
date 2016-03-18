@@ -79,3 +79,6 @@ ________________________________________________________________________________
   sudo exportfs -a
   sudo /etc/init.d/nfs-kernel-server start
   ```
+##### List DHCP Leases
+[thekelleys.org](http://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2010q3/004384.html)  
+`less /var/lib/misc/dnsmasq.leases`
