@@ -15,3 +15,4 @@ This repo contains links and instructions on all the research i have done for my
 [Network](https://github.com/Tristan2252/Sources/blob/master/sources.md#network)
 * [Display Adapter Speed](https://github.com/Tristan2252/Sources/blob/master/sources.md#display-adapter-speed)
 * [PXE Setup](https://github.com/Tristan2252/Sources/blob/master/sources.md#pxe-setup)
+* [List DHCP Leases](https://github.com/Tristan2252/Sources/blob/master/sources.md#list-dhcp-leases)
