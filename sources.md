@@ -78,7 +78,8 @@ ________________________________________________________________________________
     /var/lib/tftpboot/Ubuntu/14.04/amd64 *(ro,async,no_root_squash,no_subtree_check) # add line to exports
   sudo exportfs -a
   sudo /etc/init.d/nfs-kernel-server start
-  ```
+  ```  
+  
 ##### List DHCP Leases
 [thekelleys.org](http://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2010q3/004384.html)  
 `less /var/lib/misc/dnsmasq.leases`
