@@ -64,6 +64,7 @@ ________________________________________________________________________________
 
 ##### PXE Setup
 [maketecheasier](https://www.maketecheasier.com/configure-pxe-server-ubuntu/)  
+Use [ubuntuforums](https://help.ubuntu.com/community/UbuntuLTSP/ProxyDHCP) for dnsmasq proxy config  
 * Add Image to PXE Server
   - Add Ubuntu 14.04 Desktop Boot Images to PXE Server
   ```
