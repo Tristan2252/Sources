@@ -80,6 +80,7 @@ Use [ubuntuforums](https://help.ubuntu.com/community/UbuntuLTSP/ProxyDHCP) for d
   sudo exportfs -a
   sudo /etc/init.d/nfs-kernel-server start
   ```  
+  
 ##### Diskless Ubuntu Over PXE
 [serenux](http://www.serenux.com/2011/04/howto-create-a-diskless-workstation-that-boots-from-pxe-using-ubuntu/)
 ```
