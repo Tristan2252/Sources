@@ -80,7 +80,29 @@ Use [ubuntuforums](https://help.ubuntu.com/community/UbuntuLTSP/ProxyDHCP) for d
   sudo exportfs -a
   sudo /etc/init.d/nfs-kernel-server start
   ```  
-  
+##### Diskless Ubuntu Over PXE
+[serenux](http://www.serenux.com/2011/04/howto-create-a-diskless-workstation-that-boots-from-pxe-using-ubuntu/)
+```
+sudo vim /etc/initramfs-tools/initramfs.conf
+  MODULES=netboot
+  BOOT=nfs
+
+sudo mkinitramfs -o ./initrd.img
+cp /boot/vmlinuz-`uname -r` ./vmlinuz
+
+###### Be sure to add nfs mount folder to /etc/exports before mounting ######
+sudo apt-get install nfs-common
+mkdir /dev/shm/nfs
+sudo mount -t nfs -nolock 192.168.0.10:/srv/nfs/disklessboot /dev/shm/nfs
+
+sudo cp -avx /. /dev/shm/nfs/.
+sudo cp -avx /dev/. /dev/shm/nfs/dev/.
+
+sudo mkdir -p /srv/tftp/disklessboot
+sudo cp /srv/nfs/disklessboot/home/USERNAME/vmlinuz /srv/tftp/disklessboot/
+sudo cp /srv/nfs/disklessboot/home/USERNAME/initrd.img /srv/tftp/disklessboot/
+```
+
 ##### List DHCP Leases
 [thekelleys.org](http://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2010q3/004384.html)  
 `less /var/lib/misc/dnsmasq.leases`
