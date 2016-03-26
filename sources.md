@@ -8,6 +8,8 @@ f(x) = \begin{dcases*}
           f(x/2) + b  & if n > 2
        \end(dcases*}
 ```
+#####  Mathematical Symbols
+[oeis.org](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
 
 ### KVM  
 _________________________________________________________________________________________
