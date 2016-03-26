@@ -1,3 +1,13 @@
+### Latex
+##### System of Equations
+[wikibooks](https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics)
+```
+f(x) = \begin{dcases*}
+          a           & if n = 1\\
+          f(x/2) + b  & if n > 2
+       \end(dcases*}
+```
+
 ### KVM  
 _________________________________________________________________________________________
 ##### List VM's
