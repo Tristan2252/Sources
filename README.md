@@ -2,6 +2,9 @@
 This repo contains links and instructions on all the research i have done for my personal projects  
 
 ## Table of Contents:
+[LaTeX](https://github.com/Tristan2252/Sources/blob/master/sources.md#latex)
+* [System of Equations](https://github.com/Tristan2252/Sources/blob/master/sources.md#system-of-equations)
+
 [KVM](https://github.com/Tristan2252/Sources/blob/master/sources.md#kvm)  
 * [List VM's](https://github.com/Tristan2252/Sources/blob/master/sources.md#list-vms)
 * [Create Disk](https://github.com/Tristan2252/Sources/blob/master/sources.md#create-disk-img)
