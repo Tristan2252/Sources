@@ -11,6 +11,22 @@ f(x) = \begin{dcases*}
 #####  Mathematical Symbols
 [List of LaTeX Methematical Symbols](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
 
+### System
+__________________________________________________________________________________________
+##### Shell Scripts and Cron Jobs
+Edit Cron config file `sudo crontab -e`  
+Config file syntax: `m h dom mon dow   command`  
+- *m*: minute the command executes on, between 0 and 59.
+- *h*: hour the command executes on, between 0 and 23.
+- *dom*: day of month the command executes on.
+- *mon*: the month the command executes on, between 1 and 12.
+- *dow*: the day of the week the command executes on, between 0 and 7. Sunday may be specified by using 0 or 7, both values are valid.
+- *command*: the command to execute.
+Example:
+```
+# m h dom mon dow   command
+0 0 * * * bash /usr/local/bin/backup.sh
+```
 ### KVM  
 _________________________________________________________________________________________
 ##### List VM's
