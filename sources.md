@@ -14,6 +14,7 @@ f(x) = \begin{dcases*}
 ### System
 __________________________________________________________________________________________
 ##### Shell Scripts and Cron Jobs
+*Source*:[help.ubuntu.com](https://help.ubuntu.com/lts/serverguide/backup-shellscripts.html)  
 Edit Cron config file `sudo crontab -e`  
 Config file syntax: `m h dom mon dow   command`  
 - *m*: minute the command executes on, between 0 and 59.
