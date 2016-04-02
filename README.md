@@ -6,6 +6,9 @@ This repo contains links and instructions on all the research i have done for my
 * [System of Equations](https://github.com/Tristan2252/Sources/blob/master/sources.md#system-of-equations)
 * [Mathematical Symbols](https://github.com/Tristan2252/Sources/blob/master/sources.md#mathematical-symbols)
 
+[System](https://github.com/Tristan2252/Sources/blob/master/sources.md#system)
+* [Shell Scripts and Cron Jobs](https://github.com/Tristan2252/Sources/blob/master/sources.md#shell-scripts-and-cron-jobs)
+
 [KVM](https://github.com/Tristan2252/Sources/blob/master/sources.md#kvm)  
 * [List VM's](https://github.com/Tristan2252/Sources/blob/master/sources.md#list-vms)
 * [Create Disk](https://github.com/Tristan2252/Sources/blob/master/sources.md#create-disk-img)
