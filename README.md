@@ -24,3 +24,4 @@ This repo contains links and instructions on all the research i have done for my
 * [PXE Setup](https://github.com/Tristan2252/Sources/blob/master/sources.md#pxe-setup)
 * [List DHCP Leases](https://github.com/Tristan2252/Sources/blob/master/sources.md#list-dhcp-leases)
 * [Diskless Ubuntu-Over Pxe](https://github.com/Tristan2252/Sources/blob/master/sources.md#diskless-ubuntu-over-pxe)
+* [Change MTU](https://github.com/Tristan2252/Sources/blob/master/sources.md#change-mtu)
