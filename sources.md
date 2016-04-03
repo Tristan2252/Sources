@@ -92,6 +92,11 @@ ________________________________________________________________________________
 ##### Display Adapter Speed
 `ethtool eth0`
 
+##### Change MTU  
+*Source*:[cyberciti.biz](http://www.cyberciti.biz/faq/centos-rhel-redhat-fedora-debian-linux-mtu-size/)  
+Syntax:`ifconfig ${Interface} mtu ${SIZE} up`  
+Example: `ifconfig eth1 mtu 9000 up`  
+
 ##### PXE Setup
 [maketecheasier](https://www.maketecheasier.com/configure-pxe-server-ubuntu/)  
 Use [ubuntuforums](https://help.ubuntu.com/community/UbuntuLTSP/ProxyDHCP) for dnsmasq proxy config  
