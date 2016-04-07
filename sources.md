@@ -9,7 +9,8 @@ f(x) = \begin{dcases*}
        \end(dcases*}
 ```
 #####  Mathematical Symbols
-[List of LaTeX Methematical Symbols](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
+[List of LaTeX Methematical Symbols](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)  
+Percent `\%`  
 
 ### System
 __________________________________________________________________________________________
