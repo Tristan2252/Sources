@@ -12,6 +12,11 @@ f(x) = \begin{dcases*}
 [List of LaTeX Methematical Symbols](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)  
 Percent `\%`  
 
+##### Commands with parameters  
+*Source*:[sharelatex.com](https://www.sharelatex.com/learn/Commands)
+{\Command Name}[parameter number]{\Command{#parameter number}  
+`\newcommand{\bb}[1]{\mathbb{#1}}`  
+
 ### System
 __________________________________________________________________________________________
 ##### Shell Scripts and Cron Jobs
