@@ -13,7 +13,7 @@ f(x) = \begin{dcases*}
 Percent `\%`  
 
 ##### Commands with parameters  
-*Source*:[sharelatex.com](https://www.sharelatex.com/learn/Commands)
+*Source*:[sharelatex.com](https://www.sharelatex.com/learn/Commands)  
 {\Command Name}[parameter number]{\Command{#parameter number}  
 `\newcommand{\bb}[1]{\mathbb{#1}}`  
 
