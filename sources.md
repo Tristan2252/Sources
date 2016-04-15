@@ -38,6 +38,7 @@ Example:
 *Source*[inuxconfig.org](https://linuxconfig.org/recover-reset-forgotten-linux-root-password)  
 Open GRUB and select kernel.  
 Then press `e` to edit. Remove `ro quiet splash` and replace with `rw init=/bin/bash`. Then boot kernel  
+Use `passwd [USER]` to change password  
   
 ### KVM  
 _________________________________________________________________________________________
