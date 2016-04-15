@@ -33,7 +33,12 @@ Example:
 ```
 # m h dom mon dow   command
 0 0 * * * bash /usr/local/bin/backup.sh
-```
+```  
+##### Grub Password Reset  
+*Source*[inuxconfig.org](https://linuxconfig.org/recover-reset-forgotten-linux-root-password)  
+Open GRUB and select kernel.  
+Then press `e` to edit. Remove `ro quiet splash` and replace with `rw init=/bin/bash`. Then boot kernel  
+  
 ### KVM  
 _________________________________________________________________________________________
 ##### List VM's
