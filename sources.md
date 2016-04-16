@@ -100,7 +100,12 @@ sde      8:64   0 465.8G  0 disk
 └─sde1   8:65   0 465.8G  0 part /mnt/BackupDrive
 ```
 ### Network
-______________________________________________________________________________________________________
+______________________________________________________________________________________________________  
+##### Mount Samba Share  
+*Source*[samba.org](https://wiki.samba.org/index.php/Mounting_samba_shares_from_a_unix_client)  
+From the terminal: `mount -t cifs -o user=luke //192.168.1.104/share /mnt/linky_share` 
+To Mount at boot add `//192.168.2.100/share   /mnt/folder cifs  user=user,password=password 0 0` to fstab
+  
 ##### Display Adapter Speed
 `ethtool eth0`
 
