@@ -22,6 +22,7 @@ This repo contains links and instructions on all the research i have done for my
 * [Find UUID](https://github.com/Tristan2252/Sources/blob/master/sources.md#find-uuid-of-drive)
  
 [Network](https://github.com/Tristan2252/Sources/blob/master/sources.md#network)
+* [Mount Samba Share](https://github.com/Tristan2252/Sources/blob/master/sources.md#mount-samba-share)
 * [Display Adapter Speed](https://github.com/Tristan2252/Sources/blob/master/sources.md#display-adapter-speed)
 * [PXE Setup](https://github.com/Tristan2252/Sources/blob/master/sources.md#pxe-setup)
 * [List DHCP Leases](https://github.com/Tristan2252/Sources/blob/master/sources.md#list-dhcp-leases)
