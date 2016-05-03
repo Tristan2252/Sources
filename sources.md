@@ -17,6 +17,16 @@ Percent `\%`
 {\Command Name}[parameter number]{\Command{#parameter number}  
 `\newcommand{\bb}[1]{\mathbb{#1}}`  
 
+##### Import PDF into Latex
+*Source*:[stackexchange.com](http://tex.stackexchange.com/questions/105589/insert-pdf-file-in-latex-document)  
+NOTE: There are options to only add slected pages  
+```
+\usepackage[final]{pdfpages}
+\begin{document}
+          \includepdf[pages=-]{file.pdf}
+\end{document}
+```  
+
 ### System
 __________________________________________________________________________________________
 ##### Shell Scripts and Cron Jobs
