@@ -6,6 +6,7 @@ This repo contains links and instructions on all the research i have done for my
 * [System of Equations](https://github.com/Tristan2252/Sources/blob/master/sources.md#system-of-equations)
 * [Mathematical Symbols](https://github.com/Tristan2252/Sources/blob/master/sources.md#mathematical-symbols)
 * [Commands with Parameters](https://github.com/Tristan2252/Sources/blob/master/sources.md#commands-with-parameters)
+* [Import PDF into Latex](https://github.com/Tristan2252/Sources/blob/master/sources.md#import-pdf-into-latex)
 
 [System](https://github.com/Tristan2252/Sources/blob/master/sources.md#system)
 * [Shell Scripts and Cron Jobs](https://github.com/Tristan2252/Sources/blob/master/sources.md#shell-scripts-and-cron-jobs)
