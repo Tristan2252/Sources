@@ -10,7 +10,8 @@ This repo contains links and instructions on all the research i have done for my
 
 [System](https://github.com/Tristan2252/Sources/blob/master/sources.md#system)
 * [Shell Scripts and Cron Jobs](https://github.com/Tristan2252/Sources/blob/master/sources.md#shell-scripts-and-cron-jobs)
-* [Grub Password Reset](https://github.com/Tristan2252/Sources/blob/master/sources.md#grub-password-reset)
+* [Grub Password Reset](https://github.com/Tristan2252/Sources/blob/master/sources.md#grub-password-reset)  
+* [Xfce Window Compositing](https://github.com/Tristan2252/Sources/blob/master/sources.md#xfce-window-compositing)
 
 [KVM](https://github.com/Tristan2252/Sources/blob/master/sources.md#kvm)  
 * [List VM's](https://github.com/Tristan2252/Sources/blob/master/sources.md#list-vms)
