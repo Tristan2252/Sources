@@ -51,7 +51,7 @@ Then press `e` to edit. Remove `ro quiet splash` and replace with `rw init=/bin/
 Use `passwd [USER]` to change password  
 
 ##### XFCE Window Compositing  
-*Source* [manpages.ubuntu.com](http://manpages.ubuntu.com/manpages/trusty/man1/compton.1.html)
+*Source* [manpages.ubuntu.com](http://manpages.ubuntu.com/manpages/trusty/man1/compton.1.html)  
 Config file located in `~/.config/compton.conf`, see link for options.  
   
 ### KVM  
