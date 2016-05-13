@@ -161,8 +161,8 @@ Use [ubuntuforums](https://help.ubuntu.com/community/UbuntuLTSP/ProxyDHCP) for d
 [serenux](http://www.serenux.com/2011/04/howto-create-a-diskless-workstation-that-boots-from-pxe-using-ubuntu/)
 ```
 sudo vim /etc/initramfs-tools/initramfs.conf
-  MODULES=netboot
-  BOOT=nfs
+            MODULES=netboot
+            BOOT=nfs
 
 sudo mkinitramfs -o ./initrd.img
 cp /boot/vmlinuz-`uname -r` ./vmlinuz
@@ -178,7 +178,16 @@ sudo cp -avx /dev/. /dev/shm/nfs/dev/.
 sudo mkdir -p /srv/tftp/disklessboot
 sudo cp /srv/nfs/disklessboot/home/USERNAME/vmlinuz /srv/tftp/disklessboot/
 sudo cp /srv/nfs/disklessboot/home/USERNAME/initrd.img /srv/tftp/disklessboot/
-```
+
+sudo vim /etc/fstab
+           proc            /proc           proc    defaults        0       0                                             
+           /dev/nfs        /               nfs     defaults        1       1                                            
+           none            /tmp            tmpfs   defaults        0       0                                             
+           none            /var/run        tmpfs   defaults        0       0                                             
+           none            /var/lock       tmpfs   defaults        0       0                                             
+           none            /var/tmp        tmpfs   defaults        0       0                                             
+           /dev/hdc        /media/cdrom0   udf,iso9660 user,noauto 0       0    
+```  
 
 ##### List DHCP Leases
 [thekelleys.org](http://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2010q3/004384.html)  
