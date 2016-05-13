@@ -22,6 +22,7 @@ This repo contains links and instructions on all the research i have done for my
   
 [Drives](https://github.com/Tristan2252/Sources/blob/master/sources.md#drives)
 * [Find UUID](https://github.com/Tristan2252/Sources/blob/master/sources.md#find-uuid-of-drive)
+* [Hide Partition](https://github.com/Tristan2252/Sources/blob/master/sources.md#hide-partition)
  
 [Network](https://github.com/Tristan2252/Sources/blob/master/sources.md#network)
 * [Mount Samba Share](https://github.com/Tristan2252/Sources/blob/master/sources.md#mount-samba-share)
