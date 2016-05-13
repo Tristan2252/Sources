@@ -118,7 +118,9 @@ ________________________________________________________________________________
 ##### Mount Samba Share  
 *Source*:[samba.org](https://wiki.samba.org/index.php/Mounting_samba_shares_from_a_unix_client)  
 From the terminal: `mount -t cifs -o user=luke //192.168.1.104/share /mnt/linky_share`  
-To Mount at boot add `//192.168.2.100/share   /mnt/folder cifs  user=user,password=password 0 0` to fstab
+To Mount at boot add `//192.168.2.100/share   /mnt/folder cifs  user=user,password=password 0 0` to fstab  
+* To make and use a password file for cifs add `username=user password=pass` to file and then use file with `credentials=filename` in fstab. `chmod 600 file` to prevent unwanted access.  
+* set `user` flag in fstab to allow non-root users to mount  
   
 ##### Display Adapter Speed
 `ethtool eth0`
