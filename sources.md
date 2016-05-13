@@ -112,7 +112,13 @@ sdd      8:48   0 298.1G  0 disk
 └─sdd1   8:49   0 298.1G  0 part /mnt/VmDrive
 sde      8:64   0 465.8G  0 disk
 └─sde1   8:65   0 465.8G  0 part /mnt/BackupDrive
-```
+```  
+
+##### Hide Partition
+*Source*: [askubuntu.com](http://askubuntu.com/questions/124094/how-to-hide-an-ntfs-partition-from-ubuntu)  
+Create `hide-drives.rules` in `/etc/udev/rules.d/` and add `KERNEL=="sda1", ENV{UDISKS_IGNORE}="1"` for each dirve  
+Load changes with `sudo udevadm control --reload-rules` and then `sudo udevadm trigger`  
+  
 ### Network
 ______________________________________________________________________________________________________  
 ##### Mount Samba Share  
