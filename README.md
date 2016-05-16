@@ -12,6 +12,7 @@ This repo contains links and instructions on all the research i have done for my
 * [Shell Scripts and Cron Jobs](https://github.com/Tristan2252/Sources/blob/master/sources.md#shell-scripts-and-cron-jobs)
 * [Grub Password Reset](https://github.com/Tristan2252/Sources/blob/master/sources.md#grub-password-reset)  
 * [Xfce Window Compositing](https://github.com/Tristan2252/Sources/blob/master/sources.md#xfce-window-compositing)
+* [DPKG Error with Corrupt or Missing package](https://github.com/Tristan2252/Sources/blob/master/sources.md#dpkg-error-with-corrupt-or-missing-package)
 
 [KVM](https://github.com/Tristan2252/Sources/blob/master/sources.md#kvm)  
 * [List VM's](https://github.com/Tristan2252/Sources/blob/master/sources.md#list-vms)
