@@ -53,6 +53,11 @@ Use `passwd [USER]` to change password
 ##### XFCE Window Compositing  
 *Source* [manpages.ubuntu.com](http://manpages.ubuntu.com/manpages/trusty/man1/compton.1.html)  
 Config file located in `~/.config/compton.conf`, see link for options.  
+ 
+##### DPKG Error with Corrupt or Missing package  
+`sudo vim /var/lib/dpkg/status` remove entries of Corrupt package  
+`sudo apt-get update` refresh dpkg  
+`sudo apt-get install -f` run fix on dpkg  
   
 ### KVM  
 _________________________________________________________________________________________
