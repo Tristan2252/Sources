@@ -59,6 +59,20 @@ Config file located in `~/.config/compton.conf`, see link for options.
 `sudo apt-get update` refresh dpkg  
 `sudo apt-get install -f` run fix on dpkg  
   
+##### System Integrity Protection in OS X El Capitan  
+*Sources* 
+[Create a OS X El Capitan Boot Installer](http://osxdaily.com/2015/09/30/create-os-x-el-capitan-boot-install-drive/) 
+[Disable System Integrity Protection](http://osxdaily.com/2015/10/05/disable-rootless-system-integrity-protection-mac-os-x/)  
+  
+First create a OS X recovery usb using the fallowing command  
+`sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/ElCapInstaller --applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app`  
+  
+Boot into Recovery USB by holding `Option Key` on boot and selecting the usb.  
+After boot go to menu and open terminal app.  
+Then run `csrutil disable; reboot`  
+
+After reboot into original OS use `csrutil status` to check status of System Integrity  
+
 ### KVM  
 _________________________________________________________________________________________
 ##### List VM's
