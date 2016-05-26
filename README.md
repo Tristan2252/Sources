@@ -8,6 +8,9 @@ This repo contains links and instructions on all the research i have done for my
 * [Commands with Parameters](https://github.com/Tristan2252/Sources/blob/master/LaTeX.md#commands-with-parameters)
 * [Import PDF into Latex](https://github.com/Tristan2252/Sources/blob/master/Latex.md#import-pdf-into-latex)
 
+[Vim](https://github.com/Tristan2252/Sources/blob/master/Vim.md)
+* [Change Text Between Punctuation](https://github.com/Tristan2252/Sources/blob/master/Vim.md#change-text-between-punctuation)
+
 [System](https://github.com/Tristan2252/Sources/blob/master/System.md)
 * [Shell Scripts and Cron Jobs](https://github.com/Tristan2252/Sources/blob/master/System.md#shell-scripts-and-cron-jobs)  
 * [Grub Password Reset](https://github.com/Tristan2252/Sources/blob/master/System.md#grub-password-reset)  
