@@ -61,7 +61,7 @@ Config file located in `~/.config/compton.conf`, see link for options.
   
 ##### System Integrity Protection in OS X El Capitan  
 *Sources* 
-[Create a OS X El Capitan Boot Installer](http://osxdaily.com/2015/09/30/create-os-x-el-capitan-boot-install-drive/) 
+[Create a OS X El Capitan Boot Installer](http://osxdaily.com/2015/09/30/create-os-x-el-capitan-boot-install-drive/), 
 [Disable System Integrity Protection](http://osxdaily.com/2015/10/05/disable-rootless-system-integrity-protection-mac-os-x/)  
   
 First create a OS X recovery usb using the fallowing command  
