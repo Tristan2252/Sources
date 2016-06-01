@@ -44,4 +44,6 @@ Then run `csrutil disable; reboot`
 
 After reboot into original OS use `csrutil status` to check status of System Integrity  
 
-
+##### SSH Port Forwarding  
+  
+Command: `ssh -L [LOCAL PORT]:localhost:[REMOTE PORT] user@hostip`  
