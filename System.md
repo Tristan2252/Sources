@@ -48,6 +48,6 @@ After reboot into original OS use `csrutil status` to check status of System Int
   
 Command: `ssh -L [LOCAL PORT]:localhost:[REMOTE PORT] user@hostip`  
 
-##### Powerline Theaming  
+##### Powerline Theming  
 Copy files in `/usr/local/lib/python2.7/powerline/config_files/` to `~/.config/powerline`  
 Any changed made to files in the directory will take affect to powerline  
