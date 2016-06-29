@@ -12,6 +12,9 @@ This repo contains links and instructions on all the research i have done for my
 * [Change Text Between Punctuation](https://github.com/Tristan2252/Sources/blob/master/Vim.md#change-text-between-punctuation)
 * [Basic Vim Cheatsheet](http://www.worldtimzone.com/res/vi.html)
 
+[Bash](https://github.com/Tristan2252/Sources/blob/master/Bash.md#bash)
+* [Redirection of Standard Outputs](https://github.com/Tristan2252/Sources/blob/master/Bash.md#redirection-of-standard-outputs)
+
 [System](https://github.com/Tristan2252/Sources/blob/master/System.md)
 * [Shell Scripts and Cron Jobs](https://github.com/Tristan2252/Sources/blob/master/System.md#shell-scripts-and-cron-jobs)  
 * [Grub Password Reset](https://github.com/Tristan2252/Sources/blob/master/System.md#grub-password-reset)  
