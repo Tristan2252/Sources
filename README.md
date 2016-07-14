@@ -41,6 +41,7 @@ This repo contains links and instructions on all the research i have done for my
 * [List DHCP Leases](https://github.com/Tristan2252/Sources/blob/master/Network.md#list-dhcp-leases)
 * [Diskless Ubuntu-Over Pxe](https://github.com/Tristan2252/Sources/blob/master/Network.md#diskless-ubuntu-over-pxe)
 * [Change MTU](https://github.com/Tristan2252/Sources/blob/master/Network.md#change-mtu)
+* [Disable Firmware Inherited Nic Names](https://github.com/Tristan2252/Sources/blob/master/Network.md#disable-firmware-inherited-nic-names-1604)
 
 [Media](https://github.com/Tristan2252/Sources/blob/master/Media.md)
 * [Read Bluray Linux](https://github.com/Tristan2252/Sources/blob/master/Media.md#read-bluray-linux)
