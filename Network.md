@@ -73,4 +73,8 @@ sudo vim /etc/fstab
 [thekelleys.org](http://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2010q3/004384.html)  
 `less /var/lib/misc/dnsmasq.leases`  
 
+##### Disable Firmware Inherited Nic Names, 16.04  
+*Source*: [askubuntu.com](http://askubuntu.com/questions/767786/changing-network-interfaces-name-ubuntu-16-04)  
+Edit `/etc/default/grub` and change `GRUB_CMDLINE_LINUX=""` to `GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"`  
+Save and run `sudo update-grub` and reboot.
 
