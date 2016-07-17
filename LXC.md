@@ -25,3 +25,7 @@ $ chmod +x /home/lxcuser
 ```  
 * Logount of lxcuser and add `lxcuser veth lxcbr0 10` to `/etc/lxc/lxc-usernet` then restart  
 * Loginto lxcuser (not over ssh) and run `lxc-create -t download -n [CONTAINER NAME] -- -d ubuntu -r trusty -a amd64`  
+
+
+### LXD
+
