@@ -24,8 +24,12 @@ $ chmod +x /home/lxcuser
     lxc.id_map = g 0 100000 65536 # same as above for /etc/subgid
 ```  
 * Logount of lxcuser and add `lxcuser veth lxcbr0 10` to `/etc/lxc/lxc-usernet` then restart  
-* Loginto lxcuser (not over ssh) and run `lxc-create -t download -n [CONTAINER NAME] -- -d ubuntu -r trusty -a amd64`  
+* Loginto lxcuser (not over ssh) and run `lxc-create -t download -n [CONTAINER NAME] -- -d ubuntu -r trusty -a amd64
+```
 
 
 ### LXD
 
+##### Creating an LXD container:  
+
+To create a container 
