@@ -92,7 +92,7 @@ Now that the device is added we need to get the permissions set correctly so the
 the shared storage pool. This requires us to change the owner of the pool to those of the user in the container. A simple `chmod 777`
 could fix this issue but it would be insecure due to the `rwx` permissions of everyone. To change the owner of the pool to the
 container user we first need to find the uid of the user. Running `ls -l` on the *rootfs* folder located at
-`/var/lib/lxd/containers/<container>/rootfs/` will give us the uid number we need in the 3rd column of the output.
+`/var/lib/lxd/containers/<container>/rootfs/` will give us the uid number we need. This number can be found in the 3rd column of the output.
 ```
 $ ls -l /var/lib/lxd/containers/File-Server/rootfs/
 
@@ -107,3 +107,9 @@ drwxr-xr-x  5 165536 165536 4096 Jul 16 13:15 home
                         .
 ```
 NOTE: `ls` needs to be ran as root because no other users have viewing access to */var/lib/lxd/containers/*.  
+With the uid of the container user we can now set the owner of the storage pool on the host as the uid we found. This is done with
+`chown -R uid:gid /path/to/zfs-pool/` in my case `chown -R 165536:165536 /share-pool/`. The `-R` flag is used to recessively set the
+permissions in case there are any perviously stored files within the pool. The container user now has `rw` permissions and can be tested
+by attaching to the container and touching a file to the device we added earlier. NOTE: the host user will not be abel to write to the
+storage pool now that the permissions are changed, but in my case there is no need to. If access is need by the host, it can be done by
+mounting the samba share and writing that way. All that is left now is to setup the samba share and start storing files.
