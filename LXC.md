@@ -27,15 +27,15 @@ $ chmod +x /home/lxcuser
 * Loginto lxcuser (not over ssh) and run `lxc-create -t download -n [CONTAINER NAME] -- -d ubuntu -r trusty -a amd64`
 
 
-### LXD
+## LXD
 
-##### Creating an LXD container:  
+### Creating an LXD container:  
 
 To create a container make sure LXD is installed with `sudo apt-get install lxd`  
 Run command `lxc launch ubuntu:<release#> <name of container>`  
 With the ubuntu release option you can use `ubuntu:` to automatically obtain the latest release of ubuntu  
 
-##### LXD Usage commands:  
+### LXD Usage commands:  
 
 Use `lxc list` to list all the launched containers  
 `lxc exec <container> -- command` will run the command as the root user of the container,  
@@ -53,13 +53,38 @@ For example to add a shared folder a command such as
 This command will add a device of type *disk* found on the host at */home/server/share* and attached to the guest at */mnt/share*.  
 See [this page](https://github.com/Tristan2252/Sources) for more details on sharing folders.  
 
-**My LXD configuration**  
-**Goal**: To create an lxc container to host a samba server for file storage on the network. The shared files are stored on a ZFS pool
-located on the host. The samba server would require access to the storage pool on the host and the `rw` ability to it. See more on ZFS
+### My LXD configuration  
+**Goal**: To create an lxc container to host a samba server for file sharing on the network. The shared files will be stored on a ZFS pool
+located on the host. The samba server will need access to the storage pool on the host and the `rw` ability to it. See more on ZFS
 [here](https://github.com/Tristan2252/Sources)  
+
+**Container Setup**  
 To Start, run `lxc launch ubuntu: File-Server` to create the container and then `lxc start File-Server` to start it. The container needs
-access to the LAN in order to share files to clients on it, therefore we need to bridge the lxc network with the LAN. To do so create
-a [bridge interface](https://github.com/Tristan2252/Sources) and edit `/etc/default/lxd-bridge` to let lxc know this is the interface
-you want to use. In to config file update values for `LXD_BRIDGE=` and `LXD_IPV4_ADDR=`. I have experienced issues with the bride interface
-if the `LXD_IPV4_ADDR` is not set, so be sure to set its value to the ip of the host bridge interface. If using DHCP it may work with no value.
-Also set `LXD_IPV4_NAT` to false so that the server can be accessed directly from the LAN.
+access to the LAN in order to share files to the clients on it, therefore we need to create a bridge for LXC to connect with the LAN.
+To do so, create a [bridge interface](https://github.com/Tristan2252/Sources) in `/etc/network/interfaces` and run
+`lxc config edit <container>` to add your newly created bridge interface to the container config file.
+ Configuration for a network device looks like the fallowing:
+```
+eth0:
+  name: eth0
+  nictype: bridged
+  parent: br0
+  type: nic
+```
+Since i will no longer be using the default lxcbr0 that was created with the install of LXD, I updated the `/etc/default/lxd-bridge`
+to let lxc know that i dont want to use lxcbr0 or to add it to newly launched containers. To do this open `/etc/default/lxd-bridge` and
+change the value of `USE_LXD_BRIDGE=` to false. Lastly we need to setup the container's network interface. Attach to the container with
+`lxc exec File-Server -- /bin/bash` and edit the network config file located in `/etc/network/interfaces.d/eth0.cfg` with a static ip
+for the File-Server. Test for network connectivity and install samba with `sudo apt-get install samba`.  
+
+**Adding ZFS Pool***  
+Next we need to configure the ZFS storage pool, instructions on how to do so are found [here](https://github.com/Tristan2252/Sources).
+Once the storage pool is created we need to add it to the container config. This is done with the `device add` command like so:  
+`lxc config device add File-Server shared-folder disc path=/mnt/share-pool source=/share-pool`  
+The device can also be manually added to the config file by running `lxc config edit container` adding the fallowing lines:  
+```
+shared-folder:
+  path: /mnt/share-pool/
+  source: /share-pool/
+  type: disk
+```
