@@ -77,7 +77,7 @@ change the value of `USE_LXD_BRIDGE=` to false. Lastly we need to setup the cont
 `lxc exec File-Server -- /bin/bash` and edit the network config file located in `/etc/network/interfaces.d/eth0.cfg` with a static ip
 for the File-Server. Test for network connectivity and install samba with `sudo apt-get install samba`.  
 
-**Adding ZFS Pool***  
+**Adding ZFS Pool**  
 Next we need to configure the ZFS storage pool, instructions on how to do so are found [here](https://github.com/Tristan2252/Sources).
 Once the storage pool is created we need to add it to the container config. This is done with the `device add` command like so:  
 `lxc config device add File-Server shared-folder disc path=/mnt/share-pool source=/share-pool`  
@@ -88,3 +88,22 @@ shared-folder:
   source: /share-pool/
   type: disk
 ```
+Now that the device is added we need to get the permissions set correctly so the the clients as well as the server have `rw` access to
+the shared storage pool. This requires us to change the owner of the pool to those of the user in the container. A simple `chmod 777`
+could fix this issue but it would be insecure due to the `rwx` permissions of everyone. To change the owner of the pool to the
+container user we first need to find the uid of the user. Running `ls -l` on the *rootfs* folder located at
+`/var/lib/lxd/containers/<container>/rootfs/` will give us the uid number we need in the 3rd column of the output.
+```
+$ ls -l /var/lib/lxd/containers/File-Server/rootfs/
+
+total 84
+drwxr-xr-x  2 165536 165536 4096 Jul 14 14:46 bin
+drwxr-xr-x  3 165536 165536 4096 Jul 14 14:48 boot
+drwxr-xr-x  6 165536 165536 4096 Jul 14 14:48 dev
+drwxr-xr-x 90 165536 165536 4096 Jul 17 19:28 etc
+drwxr-xr-x  5 165536 165536 4096 Jul 16 13:15 home
+                        .
+                        .
+                        .
+```
+NOTE: `ls` needs to be ran as root because no other users have viewing access to */var/lib/lxd/containers/*.  
