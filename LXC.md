@@ -51,7 +51,7 @@ To show an expanded view of the container config use `lxc config show --expanded
 For example to add a shared folder a command such as  
 `lxc config device add File-Server shared-folder disc path=/mnt/share source=/home/server/share`  
 This command will add a device of type *disk* found on the host at */home/server/share* and attached to the guest at */mnt/share*.  
-See [this page](https://github.com/Tristan2252/Sources) for more details on sharing folders.  
+See "Adding ZFS Pool" for more details on sharing folders.  
 
 ### My LXD configuration  
 **Goal**: To create an lxc container to host a samba server for file sharing on the network. The shared files will be stored on a ZFS pool
