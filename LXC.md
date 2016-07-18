@@ -56,7 +56,7 @@ See [this page](https://github.com/Tristan2252/Sources) for more details on shar
 ### My LXD configuration  
 **Goal**: To create an lxc container to host a samba server for file sharing on the network. The shared files will be stored on a ZFS pool
 located on the host. The samba server will need access to the storage pool on the host and the `rw` ability to it. See more on ZFS
-[here](https://github.com/Tristan2252/Sources)  
+[here](https://github.com/Tristan2252/Sources/blob/master/Drives.md#zfs)  
 
 **Container Setup**  
 To Start, run `lxc launch ubuntu: File-Server` to create the container and then `lxc start File-Server` to start it. The container needs
@@ -78,7 +78,7 @@ change the value of `USE_LXD_BRIDGE=` to false. Lastly we need to setup the cont
 for the File-Server. Test for network connectivity and install samba with `sudo apt-get install samba`.  
 
 **Adding ZFS Pool**  
-Next we need to configure the ZFS storage pool, instructions on how to do so are found [here](https://github.com/Tristan2252/Sources).
+Next we need to configure the ZFS storage pool, instructions on how to do so are found [here](https://github.com/Tristan2252/Sources/blob/master/Drives.md#zfs).
 Once the storage pool is created we need to add it to the container config. This is done with the `device add` command like so:  
 `lxc config device add File-Server shared-folder disc path=/mnt/share-pool source=/share-pool`  
 The device can also be manually added to the config file by running `lxc config edit container` adding the fallowing lines:  
