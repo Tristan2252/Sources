@@ -22,6 +22,7 @@ This repo contains links and instructions on all the research i have done for my
 * [DPKG Error with Corrupt or Missing package](https://github.com/Tristan2252/Sources/blob/master/System.md#dpkg-error-with-corrupt-or-missing-package)
 * [SSH Port Forwarding](https://github.com/Tristan2252/Sources/blob/master/System.md#ssh-port-forwarding)
 * [Powerline Theming](https://github.com/Tristan2252/Sources/blob/master/System.md#powerline-theming)
+* [Change Default Terminal Editor](https://github.com/Tristan2252/Sources/blob/master/System.md#change-default-terminal-editor)
 
 [KVM](https://github.com/Tristan2252/Sources/blob/master/KVM.md)  
 * [List VM's](https://github.com/Tristan2252/Sources/blob/master/KVM.md#list-vms)
