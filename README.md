@@ -29,11 +29,11 @@ This repo contains links and instructions on all the research i have done for my
 * [Disk Resize](https://github.com/Tristan2252/Sources/blob/master/KVM.md#disk-resize)
 * [Mount CD](https://github.com/Tristan2252/Sources/blob/master/KVM.md#mount-cd-media)
 * [Ejecting the Existing Media](https://github.com/Tristan2252/Sources/blob/master/KVM.md#ejecting-the-existing-media)
-  
+
 [Drives](https://github.com/Tristan2252/Sources/blob/master/Drives.md)
 * [Find UUID](https://github.com/Tristan2252/Sources/blob/master/Drives.md#find-uuid-of-drive)
 * [Hide Partition](https://github.com/Tristan2252/Sources/blob/master/Drives.md#hide-partition)
- 
+
 [Network](https://github.com/Tristan2252/Sources/blob/master/Network.md)
 * [Mount Samba Share](https://github.com/Tristan2252/Sources/blob/master/Network.md#mount-samba-share)
 * [Display Adapter Speed](https://github.com/Tristan2252/Sources/blob/master/Network.md#display-adapter-speed)
@@ -48,3 +48,4 @@ This repo contains links and instructions on all the research i have done for my
 
 [LXC](https://github.com/Tristan2252/Sources/blob/master/LXC.md#lxc)
 * [Create Unprivileged Container](https://github.com/Tristan2252/Sources/blob/master/LXC.md#create-unprivileged-container)
+* [LXD](https://github.com/Tristan2252/Sources/blob/master/LXC.md#lxd)

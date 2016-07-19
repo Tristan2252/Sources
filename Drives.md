@@ -1,6 +1,6 @@
-## Drives
+# Drives
 ___________________________________________________________________________________________________________
-### Find UUID of Drive  
+## Find UUID of Drive  
 [stackexchange](http://unix.stackexchange.com/questions/658/linux-how-can-i-view-all-uuids-for-all-available-disks-on-my-system)  
 `ls -al /dev/disk/by-uuid`  
 Output:
@@ -29,12 +29,12 @@ sde      8:64   0 465.8G  0 disk
 └─sde1   8:65   0 465.8G  0 part /mnt/BackupDrive
 ```  
 
-### Hide Partition
+## Hide Partition
 *Source*: [askubuntu.com](http://askubuntu.com/questions/124094/how-to-hide-an-ntfs-partition-from-ubuntu)  
 Create `hide-drives.rules` in `/etc/udev/rules.d/` and add `KERNEL=="sda1", ENV{UDISKS_IGNORE}="1"` for each dirve  
 Load changes with `sudo udevadm control --reload-rules` and then `sudo udevadm trigger`  
 
-### ZFS  
+## ZFS  
 ZFS is very easy to configure and consists of to basic commands `zfs` and `zpool` to use.  
 To create a basic zfs pool you can run the command `sudo zpool create [pool name] [device0] [device1]...`  
 The default pool type of zfs is a dynamic stripe where the capacity of the devices are added to the pool and the
@@ -43,7 +43,7 @@ Vdev's can have the fallowing types: `disk` `file` `mirror` `raidz` `spare` `log
 using the command `sudo zpool list` as well as `zfs list`. The configuration and status of each drive within the pool can
 be seen with `sudo zpool status`.
 
-#### My Configuration
+### My Configuration
 **Goal**: In my server have 1 230GB 1 300GB and 1 4TB drives. I want to combine the storage capacity of the 230 and 300 GB
 drives and have a spare drive in case a drive happens to fail.  
 
