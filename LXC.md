@@ -61,7 +61,7 @@ located on the host. The samba server will need access to the storage pool on th
 **Container Setup**  
 To Start, run `lxc launch ubuntu: File-Server` to create the container and then `lxc start File-Server` to start it. The container needs
 access to the LAN in order to share files to the clients on it, therefore we need to create a bridge for LXC to connect with the LAN.
-To do so, create a [bridge interface](https://github.com/Tristan2252/Sources) in `/etc/network/interfaces` and run
+To do so, create a [bridge interface](https://github.com/Tristan2252/Sources/blob/master/Network.md#create-bridge-interface) in `/etc/network/interfaces` and run
 `lxc config edit <container>` to add your newly created bridge interface to the container config file.
  Configuration for a network device looks like the fallowing:
 ```
