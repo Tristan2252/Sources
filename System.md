@@ -51,3 +51,24 @@ Command: `ssh -L [LOCAL PORT]:localhost:[REMOTE PORT] user@hostip`
 ## Powerline Theming  
 Copy files in `/usr/local/lib/python2.7/powerline/config_files/` to `~/.config/powerline`  
 Any changed made to files in the directory will take affect to powerline  
+
+## Change Default Terminal Editor  
+*Source*: [howtogeek.com](http://www.howtogeek.com/howto/ubuntu/change-the-default-editor-from-nano-on-ubuntu-linux/)  
+
+Ubuntu comes with nano as the default terminal editor, for those who use vim this may cause some issues or inconveniences when editing
+config files. For example running the `lxc config` command opens nano to edit the container conf. More about LXC [here](https://github.com/Tristan2252/Sources/blob/master/LXC.md#lxd). In ubuntu based systems the default terminal editor can be changed
+with the command `sudo update-alternatives --config editor`. You will be prompted with a menu with different editors numbered in a list.
+```
+There are 4 choices for the alternative editor (providing /usr/bin/editor).
+
+  Selection    Path                Priority   Status
+------------------------------------------------------------
+* 0            /bin/nano            40        auto mode
+  1            /bin/ed             -100       manual mode
+  2            /bin/nano            40        manual mode
+  3            /usr/bin/vim.basic   30        manual mode
+  4            /usr/bin/vim.tiny    10        manual mode
+
+Press <enter> to keep the current choice[*], or type selection number:
+```
+Simply type in the number of your editor and the default will be changed!
