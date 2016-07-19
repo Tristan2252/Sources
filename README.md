@@ -33,6 +33,7 @@ This repo contains links and instructions on all the research i have done for my
 [Drives](https://github.com/Tristan2252/Sources/blob/master/Drives.md)
 * [Find UUID](https://github.com/Tristan2252/Sources/blob/master/Drives.md#find-uuid-of-drive)
 * [Hide Partition](https://github.com/Tristan2252/Sources/blob/master/Drives.md#hide-partition)
+* [ZFS](https://github.com/Tristan2252/Sources/blob/master/Drives.md#zfs)
 
 [Network](https://github.com/Tristan2252/Sources/blob/master/Network.md)
 * [Mount Samba Share](https://github.com/Tristan2252/Sources/blob/master/Network.md#mount-samba-share)
@@ -42,6 +43,7 @@ This repo contains links and instructions on all the research i have done for my
 * [Diskless Ubuntu-Over Pxe](https://github.com/Tristan2252/Sources/blob/master/Network.md#diskless-ubuntu-over-pxe)
 * [Change MTU](https://github.com/Tristan2252/Sources/blob/master/Network.md#change-mtu)
 * [Disable Firmware Inherited Nic Names](https://github.com/Tristan2252/Sources/blob/master/Network.md#disable-firmware-inherited-nic-names-1604)
+* [Create Bridge Interface](https://github.com/Tristan2252/Sources/blob/master/Network.md#create-bridge-interface)
 
 [Media](https://github.com/Tristan2252/Sources/blob/master/Media.md)
 * [Read Bluray Linux](https://github.com/Tristan2252/Sources/blob/master/Media.md#read-bluray-linux)
