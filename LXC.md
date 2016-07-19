@@ -45,7 +45,7 @@ Stoping containers is done by `lxc stop <container>` and deleting with `lxc dele
 
 **Some More Advanced Commands**  
 To edit the config file of the container use `lxc config edit <container>`. This will launch the container config
-in your default terminal text editor. To change the default terminal editor see [this page](https://github.com/Tristan2252/Sources/).
+in your default terminal text editor. To change the default terminal editor see [this page](https://github.com/Tristan2252/Sources/blob/master/System.md#change-default-terminal-editor).
 To show an expanded view of the container config use `lxc config show --expanded <container>` Some conf options found [here](https://github.com/Tristan2252/Sources/). To add a disk device to the container use the command  
 `lxc config device add <container> <device name> <type> path=</path/to/device> source=</path/of/source>`.  
 For example to add a shared folder a command such as  
