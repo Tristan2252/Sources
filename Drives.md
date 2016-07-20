@@ -35,7 +35,7 @@ Create `hide-drives.rules` in `/etc/udev/rules.d/` and add `KERNEL=="sda1", ENV{
 Load changes with `sudo udevadm control --reload-rules` and then `sudo udevadm trigger`  
 
 ## ZFS  
-*Source*: [Becoming a ZFS Ninja](https://www.youtube.com/watch?v=tPsV_8k-aVU)
+
 ZFS is very easy to configure and consists of to basic commands `zfs` and `zpool` to use.  
 To create a basic zfs pool you can run the command `sudo zpool create [pool name] [device0] [device1]...`  
 The default pool type of zfs is a dynamic stripe where the capacity of the devices are added to the pool and the
@@ -70,4 +70,10 @@ config:
 errors: No known data errors
 ```
 After this the pool was ready to be used. **NOTE**: This configuration is currently not supported on ubuntu 16.04, see ongoing issue
-[here](https://github.com/zfsonlinux/zfs/issues/4358#issuecomment-233812603)
+[here](https://github.com/zfsonlinux/zfs/issues/4358#issuecomment-233812603)  
+
+### Sources
+* [Becoming a ZFS Ninja](https://www.youtube.com/watch?v=tPsV_8k-aVU)  
+* [ZFS Cheatsheet](http://www.datadisk.co.uk/html_docs/sun/sun_zfs_cs.htm)
+* [Managing ZFS Storage Pool Properties](http://docs.oracle.com/cd/E19253-01/819-5461/gfifk/index.html)
+* [ZFS RAID levels](http://www.zfsbuild.com/2010/05/26/zfs-raid-levels/)
