@@ -89,7 +89,7 @@ shared-folder:
   type: disk
 ```
 Keep in mind this is essentially adding the folder where the device is mounted on the host, not the device itself. In the case of a zfs
-pool this seems to be ok because the pool is represented by its folder on the host system. 
+pool this seems to be ok because the pool is represented by its folder on the host system.
 Now that the device is added we need to get the permissions set correctly so the the clients as well as the server have `rw` access to
 the shared storage pool. This requires us to change the owner of the pool to those of the user in the container. A simple `chmod 777`
 could fix this issue but it would be insecure due to the `rwx` permissions of everyone. To change the owner of the pool to the
@@ -115,3 +115,10 @@ permissions in case there are any perviously stored files within the pool. The c
 by attaching to the container and touching a file to the device we added earlier. NOTE: the host user will not be abel to write to the
 storage pool now that the permissions are changed, but in my case there is no need to. If access is need by the host, it can be done by
 mounting the samba share and writing that way. All that is left now is to setup the samba share and start storing files.
+
+### Sources
+[LXD 2.0](http://insights.ubuntu.com/2016/03/14/the-lxd-2-0-story-prologue/)  
+[LXD 2.0: Your first LXD container](https://insights.ubuntu.com/2016/03/22/lxd-2-0-your-first-lxd-container/)  
+[LXD Networking](https://wiki.archlinux.org/index.php/LXD)  
+[Installing LXD and the command line too](https://linuxcontainers.org/lxd/getting-started-cli/)  
+[LXD 2.0: Blog post series](https://www.stgraber.org/2016/03/11/lxd-2-0-blog-post-series-012/)  
