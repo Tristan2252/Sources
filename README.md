@@ -23,6 +23,7 @@ This repo contains links and instructions on all the research i have done for my
 * [SSH Port Forwarding](https://github.com/Tristan2252/Sources/blob/master/System.md#ssh-port-forwarding)
 * [Powerline Theming](https://github.com/Tristan2252/Sources/blob/master/System.md#powerline-theming)
 * [Change Default Terminal Editor](https://github.com/Tristan2252/Sources/blob/master/System.md#change-default-terminal-editor)
+* [Using dd to create large file](https://github.com/Tristan2252/Sources/blob/master/System.md#using-dd-to-create-large-file)
 
 [KVM](https://github.com/Tristan2252/Sources/blob/master/KVM.md)  
 * [List VM's](https://github.com/Tristan2252/Sources/blob/master/KVM.md#list-vms)
@@ -35,6 +36,7 @@ This repo contains links and instructions on all the research i have done for my
 * [Find UUID](https://github.com/Tristan2252/Sources/blob/master/Drives.md#find-uuid-of-drive)
 * [Hide Partition](https://github.com/Tristan2252/Sources/blob/master/Drives.md#hide-partition)
 * [ZFS](https://github.com/Tristan2252/Sources/blob/master/Drives.md#zfs)
+* [Mount .img as a Loop device](https://github.com/Tristan2252/Sources/blob/master/Drives.md#mount-img-as-a-loop-device)
 
 [Network](https://github.com/Tristan2252/Sources/blob/master/Network.md)
 * [Mount Samba Share](https://github.com/Tristan2252/Sources/blob/master/Network.md#mount-samba-share)
@@ -45,6 +47,7 @@ This repo contains links and instructions on all the research i have done for my
 * [Change MTU](https://github.com/Tristan2252/Sources/blob/master/Network.md#change-mtu)
 * [Disable Firmware Inherited Nic Names](https://github.com/Tristan2252/Sources/blob/master/Network.md#disable-firmware-inherited-nic-names-1604)
 * [Create Bridge Interface](https://github.com/Tristan2252/Sources/blob/master/Network.md#create-bridge-interface)
+* [Iptables Redirect Port Forward](https://github.com/Tristan2252/Sources/blob/master/Network.md#iptables-redirect-port-forward)
 
 [Media](https://github.com/Tristan2252/Sources/blob/master/Media.md)
 * [Read Bluray Linux](https://github.com/Tristan2252/Sources/blob/master/Media.md#read-bluray-linux)
