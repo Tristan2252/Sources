@@ -105,3 +105,17 @@ bridges are on the same network this option would be set to on to be able to con
 configuration of the bridge forward delay in seconds. This will pause the forwarding packets for x seconds when
 going through the bridge. This should be set to 0. Lastly in this config is `bridge_maxwait`. This value in seconds
 defines the time the stat up script should wait for the included ports to receive an UP status.
+
+## Iptables Redirect Port Forward  
+*Source*: [IPTables - Port to another ip & port](http://unix.stackexchange.com/questions/76300/iptables-port-to-another-ip-port-from-the-inside)
+
+If you have an internal server running on a custom port that you would like the accept traffic from the internet to on its
+services default port, you can use iptalbes to do so. An example of this would be if you have an ssh server on your LAN running
+on port 2252 and you wold like to access it from the WAN using a default ssh client config. In terms of ports, internet facing
+port `22` needs to be redirected to port `2252` at the ssh server LAN ip. To achieve this the configuration would look like the fallowing
+```
+nat*
+-A PREROUTING -i $WAN -p tcp --dport 22 -j DNAT --to $LAN_IP:2252
+-A POSTROUTING -p tcp -d $LAN_IP --dport 2252 -j MASQUERADE
+
+```

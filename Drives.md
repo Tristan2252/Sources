@@ -77,3 +77,11 @@ After this the pool was ready to be used. **NOTE**: This configuration is curren
 * [ZFS Cheatsheet](http://www.datadisk.co.uk/html_docs/sun/sun_zfs_cs.htm)
 * [Managing ZFS Storage Pool Properties](http://docs.oracle.com/cd/E19253-01/819-5461/gfifk/index.html)
 * [ZFS RAID levels](http://www.zfsbuild.com/2010/05/26/zfs-raid-levels/)
+
+## Mount .img as a Loop device
+*Source*: [How can I mount a disk image?](http://superuser.com/questions/344899/how-can-i-mount-a-disk-image)  
+
+In the event that you would like to grab some files off of a .img disk image the best and easiest way to do so is by using `kpartx`.  
+When you run `kpartx -a -v myimage.disk`, `kpartx` automatically scans the disk for the offset sectors and adds the drive as a loop
+device located in `/dev/mapper/loop0px`. After this is done it can be easily mounted via `mount /dev/mapper/loop0p1 /mnt/myimage`.
+If `kpartx` does not get the job done look into `losetup`, although i did not have much luck with it.

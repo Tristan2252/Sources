@@ -71,4 +71,13 @@ There are 4 choices for the alternative editor (providing /usr/bin/editor).
 
 Press <enter> to keep the current choice[*], or type selection number:
 ```
-Simply type in the number of your editor and the default will be changed!
+Simply type in the number of your editor and the default will be changed!  
+
+## Using dd to create large file  
+*Source*: [How do I create a 1GB random file in Linux?](http://superuser.com/questions/470949/how-do-i-create-a-1gb-random-file-in-linux)
+
+Sometimes you may need to create a large file for test purposes, such as testing drive configurations in zfs. See more about ZFS [here](https://github.com/Tristan2252/Sources/blob/master/Drives.md#zfs) The `dd` command is very useful for this type of task. You
+can run the command `dd if=/dev/urandom of=sample.txt bs=64M count=16` to create a file of random data to test with. You can also set
+the input file `if` to `/dev/zero` to fill a file with zeros. The `bs` flag is the amount of data you want to write at a time while
+the `count` flag is the amount of times you want to write the `bs` to the file. In the above example `64M` is being written `16` times
+resulting in a file size of `1024` or `1G`.
