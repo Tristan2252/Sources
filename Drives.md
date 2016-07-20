@@ -67,4 +67,5 @@ config:
 
 errors: No known data errors
 ```
-After this the pool was ready to be used.
+After this the pool was ready to be used. **NOTE**: This configuration is currently not supported on ubuntu 16.04, see ongoing issue
+[here](https://github.com/zfsonlinux/zfs/issues/4358#issuecomment-233812603)

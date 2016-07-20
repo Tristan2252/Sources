@@ -88,6 +88,8 @@ shared-folder:
   source: /share-pool/
   type: disk
 ```
+Keep in mind this is essentially adding the folder where the device is mounted on the host, not the device itself. In the case of a zfs
+pool this seems to be ok because the pool is represented by its folder on the host system. 
 Now that the device is added we need to get the permissions set correctly so the the clients as well as the server have `rw` access to
 the shared storage pool. This requires us to change the owner of the pool to those of the user in the container. A simple `chmod 777`
 could fix this issue but it would be insecure due to the `rwx` permissions of everyone. To change the owner of the pool to the
