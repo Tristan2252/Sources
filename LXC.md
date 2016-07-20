@@ -117,8 +117,9 @@ storage pool now that the permissions are changed, but in my case there is no ne
 mounting the samba share and writing that way. All that is left now is to setup the samba share and start storing files.
 
 ### Sources
-[LXD 2.0](http://insights.ubuntu.com/2016/03/14/the-lxd-2-0-story-prologue/)  
-[LXD 2.0: Your first LXD container](https://insights.ubuntu.com/2016/03/22/lxd-2-0-your-first-lxd-container/)  
-[LXD Networking](https://wiki.archlinux.org/index.php/LXD)  
-[Installing LXD and the command line too](https://linuxcontainers.org/lxd/getting-started-cli/)  
-[LXD 2.0: Blog post series](https://www.stgraber.org/2016/03/11/lxd-2-0-blog-post-series-012/)  
+* [LXD 2.0](http://insights.ubuntu.com/2016/03/14/the-lxd-2-0-story-prologue/)  
+* [LXD 2.0: Your first LXD container](https://insights.ubuntu.com/2016/03/22/lxd-2-0-your-first-lxd-container/)  
+* [LXD Networking](https://wiki.archlinux.org/index.php/LXD)  
+* [Installing LXD and the command line too](https://linuxcontainers.org/lxd/getting-started-cli/)  
+* [LXD 2.0: Blog post series](https://www.stgraber.org/2016/03/11/lxd-2-0-blog-post-series-012/)  
+* [Adding a shared host directory to an LXC/LXD Container](http://askubuntu.com/questions/691039/adding-a-shared-host-directory-to-an-lxc-lxd-container)
