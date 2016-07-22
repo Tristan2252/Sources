@@ -70,7 +70,7 @@ config:
 errors: No known data errors
 ```
 After this the pool was ready to be used. **NOTE**: This configuration is currently not supported on ubuntu 16.04, see ongoing issue
-[here](https://github.com/zfsonlinux/zfs/issues/4358#issuecomment-233812603)  
+[here](https://github.com/zfsonlinux/zfs/issues/4358#issuecomment-233812603) as well as my superuser.com post [here](http://superuser.com/questions/1102939/zfs-hot-spare-not-working)
 
 ### Sources
 * [Becoming a ZFS Ninja](https://www.youtube.com/watch?v=tPsV_8k-aVU)  
