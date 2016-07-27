@@ -128,4 +128,4 @@ mounting the samba share and writing that way. All that is left now is to setup 
 * [Installing LXD and the command line too](https://linuxcontainers.org/lxd/getting-started-cli/)  
 * [LXD 2.0: Blog post series](https://www.stgraber.org/2016/03/11/lxd-2-0-blog-post-series-012/)  
 * [Adding a shared host directory to an LXC/LXD Container](http://askubuntu.com/questions/691039/adding-a-shared-host-directory-to-an-lxc-lxd-container)
-8 [Autostarting LXD containers](https://bitsandslices.wordpress.com/2015/08/26/autostarting-lxd-containers/)
+* [Autostarting LXD containers](https://bitsandslices.wordpress.com/2015/08/26/autostarting-lxd-containers/)
