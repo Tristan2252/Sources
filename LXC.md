@@ -75,7 +75,12 @@ Since i will no longer be using the default lxcbr0 that was created with the ins
 to let lxc know that i dont want to use lxcbr0 or to add it to newly launched containers. To do this open `/etc/default/lxd-bridge` and
 change the value of `USE_LXD_BRIDGE=` to false. Lastly we need to setup the container's network interface. Attach to the container with
 `lxc exec File-Server -- /bin/bash` and edit the network config file located in `/etc/network/interfaces.d/eth0.cfg` with a static ip
-for the File-Server. Test for network connectivity and install samba with `sudo apt-get install samba`.  
+for the File-Server. Test for network connectivity and install samba with `sudo apt-get install samba`. Lastly set the container to auto
+start at boot with `lxc config set container_name boot.autostart 1` or in the config as the fallowing:  
+```
+config:
+  boot.autostart: "1"
+```
 
 **Adding ZFS Pool**  
 Next we need to configure the ZFS storage pool, instructions on how to do so are found [here](https://github.com/Tristan2252/Sources/blob/master/Drives.md#zfs).
@@ -123,3 +128,4 @@ mounting the samba share and writing that way. All that is left now is to setup 
 * [Installing LXD and the command line too](https://linuxcontainers.org/lxd/getting-started-cli/)  
 * [LXD 2.0: Blog post series](https://www.stgraber.org/2016/03/11/lxd-2-0-blog-post-series-012/)  
 * [Adding a shared host directory to an LXC/LXD Container](http://askubuntu.com/questions/691039/adding-a-shared-host-directory-to-an-lxc-lxd-container)
+8 [Autostarting LXD containers](https://bitsandslices.wordpress.com/2015/08/26/autostarting-lxd-containers/)
