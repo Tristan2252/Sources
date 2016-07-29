@@ -69,8 +69,36 @@ config:
 
 errors: No known data errors
 ```
-After this the pool was ready to be used. **NOTE**: This configuration is currently not supported on ubuntu 16.04, see ongoing issue
-[here](https://github.com/zfsonlinux/zfs/issues/4358#issuecomment-233812603) as well as my superuser.com post [here](http://superuser.com/questions/1102939/zfs-hot-spare-not-working)
+After this the pool was ready to be used.
+
+##Potential Issues When Using ZFS:
+**Hot Spare**:    
+The hot spare configuration is currently not supported on ubuntu 16.04, see ongoing issue
+[here](https://github.com/zfsonlinux/zfs/issues/4358#issuecomment-233812603) as well as my superuser.com post [here](http://superuser.com/questions/1102939/zfs-hot-spare-not-working)  
+
+**Replacing Drives / Expanding Storage**:  
+The best way to add capacity to the pool is to add more `vdev's`. If this is not an option drives within `mirror` and
+`raidz` vdev's can be replaced or upgraded via a `resilver -> replace -> resilver` process where one drive is upgraded
+and rebuilt by the raid at a time.  
+
+**Drive changed sda name**:  
+If a drive's sda name is changed due to an change in partitions or drives the pool will no longer be detected by the OS.
+In order to fix this you need to import the pool. Start by runing `zpool import` it should be able to find the previously
+built pool on what was `/dev/sdaX` and is now `/dev/sdaY`. You will more then likely get an output like the fallowing:  
+```
+# zpool import
+
+  pool: dozer
+  id: 2704475622193776801
+  state: ONLINE
+  action: The pool can be imported using its name or numeric identifier.
+  config:
+    dozer       ONLINE
+      c1t9d0    ONLINE
+```  
+I you get this first attempt importing by pool ID with `zpool import 2704475622193776801`.
+If this is unsuccessful you may have to rename the pool by importing it as a different name with the command `zpool import old_name new_name`.  
+See [this post](http://superuser.com/questions/1106503/expanding-size-of-virtual-hard-drive-zfs) and [Importing ZFS Storage Pools](http://docs.oracle.com/cd/E19253-01/819-5461/gazuf/index.html) for more details.
 
 ### Sources
 * [Becoming a ZFS Ninja](https://www.youtube.com/watch?v=tPsV_8k-aVU)  
