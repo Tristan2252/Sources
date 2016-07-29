@@ -71,7 +71,7 @@ errors: No known data errors
 ```
 After this the pool was ready to be used.
 
-##Potential Issues When Using ZFS:
+###Potential Issues When Using ZFS:
 **Hot Spare**:    
 The hot spare configuration is currently not supported on ubuntu 16.04, see ongoing issue
 [here](https://github.com/zfsonlinux/zfs/issues/4358#issuecomment-233812603) as well as my superuser.com post [here](http://superuser.com/questions/1102939/zfs-hot-spare-not-working)  
