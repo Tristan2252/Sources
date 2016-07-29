@@ -82,3 +82,18 @@ can run the fallowing command to create a file of random data to test with:
 dd if=/dev/urandom of=sample.txt bs=64M count=16
 ```
 You can also set the input file `if` to `/dev/zero` to fill a file with zeros. The `bs` flag is the amount of data you want to write at a time while the `count` flag is the amount of times you want to write the `bs` to the file. In the above example `64M` is being written `16` times resulting in a file size of `1024` or `1G`.
+
+## Create SSH Key  
+*Source*: [How To Set Up SSH Keys](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2)  
+
+The most secure way to remote to a unix machine is through ssh with kay authentication. Not only does this provide security but a more
+convenient way of logging in by not requiring a password upon authentication. To get started with creating and SSH key, log into the client
+machine. To generate a kay for the client run `ssh-keygen -t rsa` as the user you plan to use ssh with. Next we need to tell the SSH server
+(the computer we a connecting to) what our ssh key is. You can send the key over ssh with the command `ssh-copy-id user@server.ip`. Be sure
+to use the same user you plan to connect to with ssh. Lastly test the connection with `ssh user@server.ip`.  
+
+**More Info on SSH keys**  
+The ssh keys are located in the home directory of the user they were generated on within the `.ssh/` subdir. You will find both `id_rsa` and
+`id_rsa.pub` keys. The `id_rsa.pub` is the public key, the key to be shared with the servers you are connecting to. The `id_rsa` is the private
+key witch is to be kept withing the `.ssh/` directory and not shared with anyone. During the ssh authentication process the server checks its
+public key against that of the clients private key, if they are from the same client the authentication is successful. 

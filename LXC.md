@@ -40,7 +40,8 @@ With the ubuntu release option you can use `ubuntu:` to automatically obtain the
 Use `lxc list` to list all the launched containers  
 `lxc exec <container> -- command` will run the command as the root user of the container,  
 This method can also be used to attach to the container by executing `lxc exec <container> -- /bin/bash`  
-You can also pull and push files to and from the container with the commands `lxc <file> pull/push source/dest`  
+You can also pull and push files to and from the container with the commands
+`lxc file pull <container><source> <destination>` or `lxc file push <source> <container><destination>`. 
 Stoping containers is done by `lxc stop <container>` and deleting with `lxc delete <container>`  
 
 **Some More Advanced Commands**  
