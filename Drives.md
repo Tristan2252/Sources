@@ -97,8 +97,7 @@ built pool on what was `/dev/sdaX` and is now `/dev/sdaY`. You will more then li
       c1t9d0    ONLINE
 ```  
 I you get this first attempt importing by pool ID with `zpool import 2704475622193776801`.
-If this is unsuccessful you may have to rename the pool by importing it as a different name with the command `zpool import old_name new_name`.  
-See [this post](http://superuser.com/questions/1106503/expanding-size-of-virtual-hard-drive-zfs) and [Importing ZFS Storage Pools](http://docs.oracle.com/cd/E19253-01/819-5461/gazuf/index.html) for more details.
+If this is unsuccessful you may have to rename the pool by importing it as a different name with the command `zpool import old_name new_name`. See [this post](http://superuser.com/questions/1106503/expanding-size-of-virtual-hard-drive-zfs) and [Importing ZFS Storage Pools](http://docs.oracle.com/cd/E19253-01/819-5461/gazuf/index.html) for more details.
 
 ### Sources
 * [Becoming a ZFS Ninja](https://www.youtube.com/watch?v=tPsV_8k-aVU)  
