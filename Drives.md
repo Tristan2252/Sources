@@ -42,7 +42,21 @@ The default pool type of zfs is a dynamic stripe where the capacity of the devic
 data written to them is striped across them. The drives are combined together within the pool as what is known as a vdev.
 Vdev's can have the fallowing types: `disk` `file` `mirror` `raidz` `spare` `log` and `cache`. Pools created can be listed
 using the command `sudo zpool list` as well as `zfs list`. The configuration and status of each drive within the pool can
-be seen with `sudo zpool status`.
+be seen with `sudo zpool status`.  
+
+**Advanced ZFS Commands**  
+* **Snapshots**: Snapshots are a saved state of the zfs pool. If any data is list of corrupt a snapshot can be used to restore
+the pool to a working state. It is good to run snapshots as frequent as backups but be prepared for them to take up space. Snapshots
+are stored within the file system of the pool under the directory `poolname/.zfs/poolname@snapname`. Initially snapshots dont take up
+any space until the filesystem is modified. When this occurs the snapshot size grows with the size of the changed made to the file system.
+To create a snapshot run the command `sudo zfs snapshot poolname/dataset_name@snapname`. Snapshots are commonly used with datasets but can
+also be used to snapshot the entire pool as well. To do so use the command `sudo zfs snapshot -r poolname@sanpname`. To list all snapshots
+as well as the space they are taking up use the command `sudo zfs list -t snapshot`. If you are having trouble finding the snapshot dir, it
+may not be set to visible. To set the sanpshot to visible use the command `sudo zfs set snapdir=visible zroot/usr`.  
+
+* **Managing ZFS Properties**: Each zpool has properties that can be changed via the command `sudo zfs set key=value poolname/dataset`. You
+can view the value of a key with the command `sudo zfs get key poolname/dataset`. To get a list of all the properties the pool has use the
+command `sudo get all poolname/dataset`. To see documentation on ZFS properties visit this page [here](http://docs.oracle.com/cd/E19253-01/816-5166/zfs-1m/index.html)   
 
 ### My Configuration
 **Goal**: In my server have 1 230GB 1 300GB and 1 4TB drives. I want to combine the storage capacity of the 230 and 300 GB
