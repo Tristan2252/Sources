@@ -119,3 +119,10 @@ nat*
 -A POSTROUTING -p tcp -d $LAN_IP --dport 2252 -j MASQUERADE
 
 ```
+
+## Finding original MAC address  
+*Source*: [Finding original MAC address from Hardware itself](http://stackoverflow.com/questions/14955504/finding-original-mac-address-from-hardware-itself)  
+
+When a bridge is setup on linux the bridge mac is set as the mac of its interface ports. If you need to get the true mac address of the interface
+for boot on lan or some other reason you can cat the interface info files using `cat /sys/class/net/eth0/address`. If you have `ethtool` installed
+you can also use `ethtool -P eth0`.

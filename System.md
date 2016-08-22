@@ -96,4 +96,12 @@ to use the same user you plan to connect to with ssh. Lastly test the connection
 The ssh keys are located in the home directory of the user they were generated on within the `.ssh/` subdir. You will find both `id_rsa` and
 `id_rsa.pub` keys. The `id_rsa.pub` is the public key, the key to be shared with the servers you are connecting to. The `id_rsa` is the private
 key witch is to be kept withing the `.ssh/` directory and not shared with anyone. During the ssh authentication process the server checks its
-public key against that of the clients private key, if they are from the same client the authentication is successful. 
+public key against that of the clients private key, if they are from the same client the authentication is successful.
+
+## Run Custom Script at Startup
+*Source*: [How to run a command when boots up](http://www.cyberciti.biz/tips/linux-how-to-run-a-command-when-boots-up.html)  
+
+Some time it is convenient to write a startup script to mount a drive or accomplish some other task on boot. After writing the script move the
+executable to `/etc/init.d/` where the init scripts are located. Then run `sudo update-rc.d mystartup.sh defaults 100` to tell linux when and
+how to start the script. The argument `defaults` refers to the default runlevels, which are 2 through 5. Number 100 means script will get executed
+before any script containing number 101. Just run the command `ls -al /etc/rc3.d/` and you will see all script soft linked to `/etc/init.d` with numbers.  
