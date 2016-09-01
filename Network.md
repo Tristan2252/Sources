@@ -125,4 +125,26 @@ nat*
 
 When a bridge is setup on linux the bridge mac is set as the mac of its interface ports. If you need to get the true mac address of the interface
 for boot on lan or some other reason you can cat the interface info files using `cat /sys/class/net/eth0/address`. If you have `ethtool` installed
-you can also use `ethtool -P eth0`.
+you can also use `ethtool -P eth0`.  
+
+## WPA Supplicant
+*Source*: [WPA supplicant](https://wiki.archlinux.org/index.php/WPA_supplicant)  
+
+If you are installing a linux distro from scratch or using ubuntu server and needing wifi capabilities you will need to use WPA Supplicant. WPA_supplicant
+allows your to configure settings such as security type, ssid, and passwords of the wifi hot spot you are wanting to connect to. All your wifi settings can
+be stored in a single config file and each hotspot is delimited by `network{<settings>}` where `settings` is your configuration for that network. A basic
+WPA_supplicant network config looks like the fallowing:
+```
+network={
+    ssid="Your SSID Here"
+    proto=RSN
+    key_mgmt=WPA-PSK
+    pairwise=CCMP TKIP
+    group=CCMP TKIP
+    psk="YourPresharedKeyHere"
+}
+```  
+To see more config options check out the man page [here](http://manpages.ubuntu.com/manpages/wily/man5/wpa_supplicant.conf.5.html). After creating the config
+file you cant init wpa_supplicant using the command `sudo wpa_supplicant -B -i interface -c /etc/wpa_supplicant/example.conf`. The `-B` flag is used to run
+wpa_supplicant in the background or like a service. wpa_supplicant only connects to the wireless network it does not handle dhcp. To obtain an IP from the
+network run a dhcp client such as `sudo dhclient $INTERFACE`. 
