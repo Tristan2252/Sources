@@ -51,6 +51,7 @@ This repo contains links and instructions on all the research i have done for my
 * [Create Bridge Interface](https://github.com/Tristan2252/Sources/blob/master/Network.md#create-bridge-interface)
 * [Iptables Redirect Port Forward](https://github.com/Tristan2252/Sources/blob/master/Network.md#iptables-redirect-port-forward)  
 * [Finding Original Mac Address](https://github.com/Tristan2252/Sources/blob/master/Network.md#finding-original-mac-address)
+* [WPA Supplicant](https://github.com/Tristan2252/Sources/blob/master/Network.md#wpa-supplicant)
 
 [Media](https://github.com/Tristan2252/Sources/blob/master/Media.md)
 * [Read Bluray Linux](https://github.com/Tristan2252/Sources/blob/master/Media.md#read-bluray-linux)
