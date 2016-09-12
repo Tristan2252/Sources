@@ -11,6 +11,7 @@ This repo contains links and instructions on all the research i have done for my
 [Vim](https://github.com/Tristan2252/Sources/blob/master/Vim.md)
 * [Change Text Between Punctuation](https://github.com/Tristan2252/Sources/blob/master/Vim.md#change-text-between-punctuation)
 * [Basic Vim Cheatsheet](http://www.worldtimzone.com/res/vi.html)
+* [Set Autocommands](https://github.com/Tristan2252/Sources/blob/master/Vim.md#set-autocommands)
 
 [Bash](https://github.com/Tristan2252/Sources/blob/master/Bash.md#bash)
 * [Redirection of Standard Outputs](https://github.com/Tristan2252/Sources/blob/master/Bash.md#redirection-of-standard-outputs)
