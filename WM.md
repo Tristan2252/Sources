@@ -10,21 +10,21 @@ The current version of `i3lock` is nice but primitive. It does not allow for cus
     - to do this `cd` into `/etc/systemd/system/` and create a `lock.service` file
     - place in the file the following;
     ```
-### run systemctl daemon-reload to reload any changes made to file                                               
+    ### run systemctl daemon-reload to reload any changes made to file                                               
                                                                                                                  
-[Unit]                                                                                                           
-Description=Lock the screen automatically after a timeout                                                        
-After=suspend.target                                                                                             
-                                                                                                                 
-[Service]                                                                                                        
-Type=forking                                                                                                     
-User=tristan                                                                                                     
-Environment=DISPLAY=:0                                                                                           
-ExecStart=/usr/bin/i3lock -i /home/tristan/.lockpic.png -c '#000000' -o '#191d0f' -w '#572020' -l '#ffffff' -e                                                                                                                                                                              
-ExecStop=/home/tristan/.dotfiles/scripts/lockpic.sh                                                              
-                                                                                                              
-[Install]                                                                                                     
-WantedBy=suspend.target    
+    [Unit]                                                                                                           
+    Description=Lock the screen automatically after a timeout                                                        
+    After=suspend.target                                                                                             
+
+    [Service]                                                                                                        
+    Type=forking                                                                                                     
+    User=tristan                                                                                                     
+    Environment=DISPLAY=:0                                                                                           
+    ExecStart=/usr/bin/i3lock -i /home/tristan/.lockpic.png -c '#000000' -o '#191d0f' -w '#572020' -l '#ffffff' -e                                                                                                                                                                              
+    ExecStop=/home/tristan/.dotfiles/scripts/lockpic.sh                                                              
+
+    [Install]                                                                                                     
+    WantedBy=suspend.target    
     ```
 
     - then run `systemctl daemon-reload` and `systemctl enable lock.service` to init the new service
