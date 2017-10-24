@@ -9,9 +9,7 @@ The current version of `i3lock` is nice but primitive. It does not allow for cus
 * Then a systemd service needs to be created for allow for launching `i3lock` upon suspend
     - to do this `cd` into `/etc/systemd/system/` and create a `lock.service` file
     - place in the file the following;
-    ```
-    ### run systemctl daemon-reload to reload any changes made to file                                               
-                                                                                                                 
+    ```                                                                                                          
     [Unit]                                                                                                           
     Description=Lock the screen automatically after a timeout                                                        
     After=suspend.target                                                                                             
