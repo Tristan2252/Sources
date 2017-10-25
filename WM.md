@@ -1,4 +1,4 @@
-# Window Managesp
+# Window Managers
 
 ## Better Version of i3lock
 
