@@ -43,4 +43,29 @@ as to prevent from conky writing to `stderr` about using the old config syntax
        my config because later I read conkys out put to format for i3bar.
     - `update_interval` is important because this is the amount of time conky will wait before refreshing 
        its output. The Value of `update_interval` needs to be `1.0` in order to allow for close to real time 
-       status updates
+       status updates from conky.
+    - my conky settings are as fallows:
+    ```conky.config = {
+        out_to_x = false,
+        own_window = false,
+        out_to_console = true,
+        background = false,
+        max_text_width = 0,
+        update_interval = 1.0,
+        total_run_times = 0,
+        short_units = true,
+        if_up_strictness = "address",
+        use_spacer = "left",
+        override_utf8_locale = false,
+        cpu_avg_samples = 2,
+    }
+    ```
+* Conky uses objects that work similar to functions to allow for customizing its output. These objects can 
+be placed in any order within the `conky.text` field along with regular text.
+* In my configuration, Im just using conky to obtain stats. So as long as I have a delimiter between stats 
+to allow me to parse them it will work. My `conky.text` file looks like the following: 
+```
+conky.text = [[
+${addr wlp3s0}  ${wireless_essid wlp3s0}, ${cpu}, ${memperc}, ${fs_free /home}
+]]
+```
