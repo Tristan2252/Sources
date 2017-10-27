@@ -69,3 +69,27 @@ conky.text = [[
 ${addr wlp3s0}  ${wireless_essid wlp3s0}, ${cpu}, ${memperc}, ${fs_free /home}
 ]]
 ```
+### i3bar
+* i3bar uses a `.json` input format to produce its output.
+* the input starts with the beginning of an array: 
+```
+# JSON version number
+{"version":1}
+# Begin the endless array.
+[
+# We send an empty first array of blocks to make the loop simpler:
+[],
+```
+* to start this array i use a `bash` script that begins with an `echo` of the above output to init the array
+* then a python script is then launched in a `while` loop and takes care of the rest of the `json` output
+    - the python script does not print that beginning of the array because I ran into a small bug where 
+      i3bar would block if multiple `prints` were used
+    - the wile loop also contains a `sleep` function for 1 sec to not flood the system with output. There
+      is also no need to refresh the output for less than 1 sec because the most refreshed object is the
+      clock (based on seconds)
+
+### Python Script
+* In order to get the desired output from i3bar i needed to write a python script to implement it 
+  because of conkys limited logic functionality.
+
+### Pango Text
