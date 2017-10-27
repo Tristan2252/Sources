@@ -1,4 +1,4 @@
-# Window Managesp
+# Window Managers
 
 ## Better Version of i3lock
 
@@ -45,7 +45,8 @@ as to prevent from conky writing to `stderr` about using the old config syntax
        its output. The Value of `update_interval` needs to be `1.0` in order to allow for close to real time 
        status updates from conky.
     - my conky settings are as fallows:
-    ```conky.config = {
+    ```
+    conky.config = {
         out_to_x = false,
         own_window = false,
         out_to_console = true,
