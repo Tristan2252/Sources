@@ -105,3 +105,38 @@ Some time it is convenient to write a startup script to mount a drive or accompl
 executable to `/etc/init.d/` where the init scripts are located. Then run `sudo update-rc.d mystartup.sh defaults 100` to tell linux when and
 how to start the script. The argument `defaults` refers to the default runlevels, which are 2 through 5. Number 100 means script will get executed
 before any script containing number 101. Just run the command `ls -al /etc/rc3.d/` and you will see all script soft linked to `/etc/init.d` with numbers.  
+
+## CUPS Setup
+To get a printer installed on Linux manually you need to setup a `cups` server. The cups server 
+can be configured through a nice web interface found at [http://localhost:631]() but it is not always 
+convenient to navigate to a web browser. NOTE: to setup user for the web interface use the command 
+`sudo usermod -aG lpadmin <username>` as shown [here](https://help.ubuntu.com/community/PrintingCupsWebInterface)
+This setup will go through the process of installing cups and a printer through the command line
+
+* Install cups with `sudo apt install cups` 
+
+Cups has a number of command line interfaces to help configure it. `lpadimn` is the program that allows 
+for configuring cups printers and classes. To setup a printer: 
+
+* First run `lpinfo -v` to get a list of available printers that are capable of being setup on your computer
+    - `lpinfo` lists the available devices or drivers known to the CUPS server. `lpinfo -m` will list all the 
+available drivers you have access to
+
+* Once the correct printer and driver is found you can then use `lpadmin -p printername -E -v printer_location -m drv:///driver.ppd`
+    - `-p` printer name
+    - `-E` enable printer after adding
+    - `-v` printer URI found with `lpinfo -v`
+    - `-m` printer driver found with `lpinfo -m`
+* Next cups needs to know to accept and print requests to this printer. Use the commands:
+    - `cupsaccept printer-name` to accept requests
+    - `cupsenable printer-name`  to enable the printer
+* You can then verify that the printer was setup correctly with the command `lpstat -p printer-name -l`
+
+Once the printer is installed your can then print to it using the command `lp -d print-name filename`
+
+### Sources:
+[Setting Up and Administering Printers by Using CUPS Command-Line Utilities](https://docs.oracle.com/cd/E23824_01/html/821-1451/gllgm.html),
+[Linux lp command](https://www.computerhope.com/unix/ulp.htm),
+[Command-Line Printer Administration](https://www.cups.org/doc/admin.html#PRINTERS),
+[How to install printer-driver-hpcups on Ubuntu](https://www.howtoinstall.co/en/ubuntu/trusty/printer-driver-hpcups),
+[CUPS/Printer-specific problems](https://wiki.archlinux.org/index.php/CUPS/Printer-specific_problems#HPLIP_Driver)
