@@ -27,6 +27,7 @@ This repo contains links and instructions on all the research i have done for my
 * [Using dd to create large file](https://github.com/Tristan2252/Sources/blob/master/System.md#using-dd-to-create-large-file)
 * [Create SSH Key](https://github.com/Tristan2252/Sources/blob/master/System.md#create-ssh-key)  
 * [Run Custom Script at Startup](https://github.com/Tristan2252/Sources/blob/master/System.md#run-custom-script-at-startup)
+* [CUPS Setup](https://github.com/Tristan2252/Sources/blob/master/System.md#cups-setup)
 
 [KVM](https://github.com/Tristan2252/Sources/blob/master/KVM.md)  
 * [List VM's](https://github.com/Tristan2252/Sources/blob/master/KVM.md#list-vms)
